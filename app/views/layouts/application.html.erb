@@ -9,48 +9,50 @@
   </head>
 
   <body>
-  <header class="row">
-    <div class="col-3">
-      <div class="circle">
-        <br />
-        THERE
-        <br />
-        IS ALWAYS
-        <br />
-        A WAY
+    <header class="row">
+      <div class="col-3">
+        <%= link_to root_path, class: 'logo' do %>
+          <div class="circle">
+            <br />
+            THERE
+            <br />
+            IS ALWAYS
+            <br />
+            A WAY
+          </div>
+        <% end %>  
       </div>
-    </div>
-    <div class="col-4 slogan">
-      NEVER GIVE UP!
-    </div>
-    <div class="col-5 links">
-      <%= link_to 'Contribute', '#' %>
+      <div class="col-4 slogan">
+        NEVER GIVE UP!
+      </div>
+      <div class="col-5 links">
+      <%= link_to 'Contribute', new_quote_path %>
       <%= link_to 'About', '#' %>
-    </div>
-  </header>
+      </div>
+    </header>
 
-  <hr />
+    <hr />
 
-  <br class="clear" />
+    <br class="clear" />
   
-    <div>
-      <%= yield %>
-    </div>
+      <div>
+        <%= yield %>
+      </div>
 
     
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
-          </div>
-          <div class="col-6 footer-blurb">
-            Proudly hacked in Boston, MA by <a href="http://thefirehoseproject.com">Marco & Ken</a><br />
-            Want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
+            </div>
+            <div class="col-6 footer-blurb">
+              Proudly hacked in Boston, MA by <a href="http://thefirehoseproject.com">Marco & Ken</a><br />
+              Want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
 
   </body>
